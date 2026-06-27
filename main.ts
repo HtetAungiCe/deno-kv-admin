@@ -84,6 +84,7 @@ app.delete("/kv/full_reset_42", async (c) => {
 // Dump the request object for learning and debugging
 // https://pg4e-deno-kv-api-10.deno.dev/dump/stuff/goes_here?key=123
 app.all('/dump/*', async (c) => {
+    checkToken(c); 
   const req = c.req
 
   // Request details
